@@ -1,7 +1,7 @@
 export default {
   title: "VitePress",
   description: "Write My Mind",
-  base: "Blog",
+  base: "/Blog",
   themeConfig: {
     socialLinks: [
       { icon: 'github', link: 'https://github.com/lyx-jay' },
