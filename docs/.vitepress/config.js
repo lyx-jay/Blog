@@ -11,17 +11,31 @@ export default {
     sidebar: [
       {
         text: "WEBPACK",
+        collapsible: true,
+        collapsed: true,
         items: [
           {text: "webpack1", link: '/handbook/webpack/webpack1.md'}
         ]
       },
       {
         text: "REACT",
+        collapsible: true,
+        collapsed: true,
         items: [
+          {text: "JSX", link: "/handbook/react/JSX.md"},
+          {text: "Context", link: "/handbook/react/Context.md"},
+          {text: "Higher-Order Components", link: "/handbook/react/HOC.md"},
+          {text: "ErrorBoundary", link: "/handbook/react/ErrorBoundary.md"},
+          {text: "Uncontrolled Components", link: "/handbook/react/Uncontrolled_Components.md"},
+          {text: "组件内容补充", link: "/handbook/react/Components_supplement.md"},
+          {text: "React 架构设计", link: "/handbook/react/React_Architecture.md"},
+          {text: "Redux", link: "/handbook/react/Redux.md"},
         ]
       },
       {
         text: "VUE",
+        collapsible: true,
+        collapsed: true,
         items: [
           {text: "MVVM & MVC", link: '/handbook/vue/MVVM_MVC.md'},
           {text: "Life Circle", link: '/handbook/vue/Vue_life_circle.md'},
@@ -33,11 +47,15 @@ export default {
       },
       {
         text: "VITEST",
+        collapsible: true,
+        collapsed: true,
         items: [
         ]
       },
       {
         text: "PROJECTS",
+        collapsible: true,
+        collapsed: true,
         items: [
           {text: "Artist", link: '/handbook/Projects/Artist.md'},
           {text: "reactuse", link: '/handbook/Projects/reactuse.md'}
