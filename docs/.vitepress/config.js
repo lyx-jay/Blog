@@ -33,6 +33,8 @@ export default {
       {
         text: "PROJECTS",
         items: [
+          {text: "Artist", link: '/handbook/Projects/Artist.md'},
+          {text: "reactuse", link: '/handbook/Projects/reactuse.md'}
         ]
       },
     ]
