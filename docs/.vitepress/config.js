@@ -23,6 +23,12 @@ export default {
       {
         text: "VUE",
         items: [
+          {text: "MVVM & MVC", link: '/handbook/vue/MVVM & MVC.md'},
+          {text: "Life Circle", link: '/handbook/vue/Vue 生命周期.md'},
+          {text: "Responsive Principle", link: '/handbook/vue/Vue响应式原理（双向数据绑定）.md'},
+          {text: "Components Communication", link: '/handbook/vue/Vue 组件通信方法.md'},
+          {text: "Computed Property", link: '/handbook/vue/Computed(计算属性) & watcher.md'},
+          {text: "v-model", link: '/handbook/vue/V-Model.md'},
         ]
       },
       {
