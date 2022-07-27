@@ -61,6 +61,14 @@ export default {
           {text: "reactuse", link: '/handbook/Projects/reactuse.md'}
         ]
       },
+      {
+        text: "基础知识",
+        collapsible: true,
+        collapsed: true,
+        items: [
+          {text: "网络请求", link: '/handbook/basic/http.md'},
+        ]
+      },
     ]
   }
 }
