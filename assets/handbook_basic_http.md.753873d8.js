@@ -1,0 +1,1 @@
+import{_ as t,c as e,o as a}from"./app.26b429bb.js";const h=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"handbook/basic/http.md"}'),o={name:"handbook/basic/http.md"};function r(s,c,n,p,d,i){return a(),e("div")}var m=t(o,[["render",r]]);export{h as __pageData,m as default};
