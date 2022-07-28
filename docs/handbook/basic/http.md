@@ -8,6 +8,7 @@
 5. onerror错误处理、onload错误处理
 6. 输出error的时候一定要写错误信息
 
+lalalalla
 
 ```js
 function myAjax() {
