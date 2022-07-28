@@ -7,3 +7,10 @@
 4. 输入 get、post有可能输错，使用选择的方式
 5. onerror错误处理、onload错误处理
 6. 输出error的时候一定要写错误信息
+
+
+```js
+function myAjax() {
+  
+}
+```
