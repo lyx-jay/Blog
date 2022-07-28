@@ -62,11 +62,11 @@ export default {
         ]
       },
       {
-        text: "基础知识",
+        text: "网络基础知识",
         collapsible: true,
         collapsed: true,
         items: [
-          {text: "网络请求", link: '/handbook/basic/http.md'},
+          {text: "使用Promise封装Ajax", link: '/handbook/basic/promise_ajax.md'},
         ]
       },
     ]
