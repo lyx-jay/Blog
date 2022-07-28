@@ -12,6 +12,16 @@ lalalalla
 
 ```js
 function myAjax() {
-  
+  return new Promise((resolve, reject) => {
+    let xhr = new XMLHttpRequest();
+    xhr.open(method, url);
+    xhr.onload = () => {
+
+    }
+    xhr.onerror = () => {
+
+    }
+    xhr.send();
+  })
 }
 ```
