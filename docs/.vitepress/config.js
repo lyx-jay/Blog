@@ -46,10 +46,11 @@ export default {
         ]
       },
       {
-        text: "VITEST",
+        text: "TYPESCRIPT",
         collapsible: true,
         collapsed: true,
         items: [
+          {text: "原始类型与对象类型", link: '/handbook/typescript/original_object_type.md'}
         ]
       },
       {
