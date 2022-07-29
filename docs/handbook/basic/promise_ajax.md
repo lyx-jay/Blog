@@ -63,6 +63,8 @@ export function get(url:string, params: Params = {name:'lvyuanxin', age: 20}):Pr
   })
 }
 
+// 超时重发函数
+// version 1
 export async function reTryGet(url:string, reTryTimes:number = 3) {
   try {
     let result = await get(url);
@@ -72,6 +74,35 @@ export async function reTryGet(url:string, reTryTimes:number = 3) {
       reTryGet(url, reTryTimes - 1);
     }
   }
+}
+```
+
+对于超时重发网络请求函数的封装，还有其他不同方案：
+```js
+// version 2
+let retryPromise = function(options,times) {
+  fetch({...options}).then(resolve)
+  .catch(err=> {
+     if(times - 1 > 0) {
+      retryPromise(options,times -1) 
+    }
+    return reject(err)
+  })
+}
+```
+
+```js
+// version 3
+async function retryFunction(times, options) {
+  for (let i = 0; i < times; i++) {
+	try {
+	  let result = await fetch(options)
+	  return result
+	} catch (err) {
+	  return new Error(err)
+	}
+  }
+  return new Error('代码除了问题')
 }
 ```
 
