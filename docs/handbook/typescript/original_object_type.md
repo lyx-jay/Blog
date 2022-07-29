@@ -63,3 +63,56 @@ const arr7: [name: string, age: number, male: boolean] = ['linbudu', 599, true];
 ```
 
 具名元组不支持以 `arr7[name]` 的形式取的元素值
+
+
+## 对象类型的类型标注
+
+在描述对象类型时，常常使用 interface 来描述对象对外提供的接口
+
+```ts
+interface IDescription {
+  name:string;
+  age:number;
+  male:boolean;
+}
+
+const obj: IDescription = {
+  name: 'lyx',
+  age: 20,
+  male:true
+}
+```
+
+注意：
+1. 每一个属性值必须与接口的属性类型一一对应
+2. 属性不能多或者少，不允许直接在对象内部声明，或是 `obj.other  = 'xxx' 这样的形式`
+
+### 属性修饰符： ？ and readonly
+
+`？`：表示该属性是可选的
+
+```ts
+interface IDescription {
+  name: string;
+  age: number;
+  male?: boolean;
+  func?: Function;
+}
+
+const obj2: IDescription = {
+  name: 'linbudu',
+  age: 599,
+  male: true,
+  // 无需实现 func 也是合法的
+};
+```
+在此时，即使你在 `obj2` 中定义了 `male` 属性，当时，访问 `obj.male` 时，其类型仍然会是 `boolean ｜ undefined`
+
+但是，可选属性不会影响你对属性赋值：
+
+```ts
+obj2.male = false;
+obj2.func = () => {};
+```
+
+`readonly`：表示该属性只读，不可以被再次赋值
