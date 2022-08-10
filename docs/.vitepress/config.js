@@ -70,6 +70,14 @@ export default {
           {text: "使用Promise封装Ajax", link: '/handbook/basic/promise_ajax.md'},
         ]
       },
+      {
+        text: "常见CSS实例",
+        collapsible: true,
+        collapsed: true,
+        items: [
+          {text: "CSS-横向瀑布流布局", link: '/handbook/css/horizontal_waterfall.md'},
+        ]
+      },
     ]
   }
 }
