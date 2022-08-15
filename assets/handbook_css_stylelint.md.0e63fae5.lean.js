@@ -1,1 +1,0 @@
-import{_ as s,c as n,o as a,a as o}from"./app.3a5e0d43.js";const A=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"handbook/css/stylelint.md"}'),l={name:"handbook/css/stylelint.md"},p=o("",1),t=[p];function D(e,c,r,F,y,C){return a(),n("div",null,t)}var i=s(l,[["render",D]]);export{A as __pageData,i as default};
