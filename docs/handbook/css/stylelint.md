@@ -1,17 +1,17 @@
 # 使用 stylelint 规范 css 书写
 
-### 为什么要使用 stylelint ？
+## 为什么要使用 stylelint ？
 
 * 我在写 CSS 的时候，经常不注意属性顺序，所以看起来非常乱
 * CSS 顺序也会影响页面性能
 
-### stylelint 在 React 中的配置
+## stylelint 在 React 中的配置
 
-#### 安装 stylelint 
+### 安装 stylelint 
 
 `npm i --save-dev stylelint stylelint-order stylelint-config-standard`
 
-#### 创建配置文件
+### 创建配置文件
 
 在 `package.json` 中添加如下命令：
 ```json
@@ -111,7 +111,7 @@ scripts: {
 }
 ```
 
-#### 安装 VsCode 插件
+### 安装 VsCode 插件
 
 插件：Stylelint
 
