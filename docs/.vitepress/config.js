@@ -76,6 +76,7 @@ export default {
         collapsed: true,
         items: [
           {text: "CSS-横向瀑布流布局", link: '/handbook/css/horizontal_waterfall.md'},
+          {text: 'stylelint-规范CSS', link: '/handbook/css/stylelint.md'}
         ]
       },
     ]
