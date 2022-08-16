@@ -10,6 +10,14 @@ export default {
     ],
     sidebar: [
       {
+        text: "JavaScript基础",
+        collapsible:true,
+        collapsed:true,
+        items: [
+          {text: '图片懒加载', link:'/handbook/js/img_lazy_load.md'}
+        ]
+      },
+      {
         text: "WEBPACK",
         collapsible: true,
         collapsed: true,
