@@ -2,11 +2,16 @@
 
 ## img 标签的 loading 属性
 
+loading: Indicates how the browser should load the image.
+* `eager`: Loads the image immediately, regardless of whether or not the image is currently within the visible viewport (this is the default value).
+* `lazy`: Defers loading the image until it reaches a calculated distance from the viewport, as defined by the browser. The intent is to avoid the network and storage bandwidth needed to handle the image until it's reasonably certain that it will be needed. This generally improves the performance of the content in most typical use cases.
+
+
 ```html
-  <img src="https://t7.baidu.com/it/u=1595072465,3644073269&fm=193&f=GIF" loading="lazy"></img>
-  <img src="https://t7.baidu.com/it/u=4198287529,2774471735&fm=193&f=GIF" loading="lazy"></img>
-  <img src="https://t7.baidu.com/it/u=825057118,3516313570&fm=193&f=GIF" loading="lazy"></img>
-  <img src="https://t7.baidu.com/it/u=1358795231,3900411654&fm=193&f=GIF" loading="lazy"></img>
+  <img src="https://t7.baidu.com/it/u=1595072465,3644073269&fm=193&f=GIF" loading="lazy" />
+  <img src="https://t7.baidu.com/it/u=4198287529,2774471735&fm=193&f=GIF" loading="lazy" />
+  <img src="https://t7.baidu.com/it/u=825057118,3516313570&fm=193&f=GIF" loading="lazy" />
+  <img src="https://t7.baidu.com/it/u=1358795231,3900411654&fm=193&f=GIF" loading="lazy" />
 ```
 
 ## intersecObserver API
@@ -113,6 +118,7 @@
       <img data-src="https://t7.baidu.com/it/u=1358795231,3900411654&fm=193&f=GIF"></img>
   </div>
   <script>
+    // 滚动监听优化，避免频繁触发
     function throttle(fn, delay) {
       let last = 0, timer = null;
       return function() {
