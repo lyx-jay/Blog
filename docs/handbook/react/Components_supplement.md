@@ -8,6 +8,12 @@
 Ref 转发是一个可选特性，其允许某些组件接收 ref，并将其向下传递（换句话说，“转发”它）给子组件。 Ref 对于需要以常规DOM形式管理的组件非常有用，比如 input、button等，该特性对于可重用组件库非常有用
 
 
+ref 属性可以接收的值有：
+1. 使用 `useRef` 创建的对象
+2. 回调函数。当 ref 属性是回调函数时，该函数接收 ref 所在 DOM 元素（也包括子DOM元素）或类实例（取决于元素的类型）作为其参数
+
+> 应该谨慎使用 ref，如果发现过多地依赖ref才能使程序正常运行，请重新考虑数据流向
+
 ```javascript
 import React, { PureComponent, createRef, forwardRef } from 'react';
 
