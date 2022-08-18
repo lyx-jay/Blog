@@ -15,7 +15,7 @@ export default {
         collapsed:true,
         items: [
           {text: '图片懒加载', link:'/handbook/js/img_lazy_load.md'},
-          {text: '高频输入事件优化', link: /handbook/js/high_frequency_input.md}
+          {text: '高频输入事件优化', link: '/handbook/js/high_frequency_input.md'}
         ]
       },
       {
