@@ -36,6 +36,14 @@ function debounce(fn, delay) {
 ```
 
 ## 如何取消上次请求？
+目前发起网络请求的方式：XMLHttpRequest、fetch、axios
+
+这三种方式都有对应的取消网络请求的方法：
+1. 取消 xhr：使用 `XMLHttpRequest.abort()` 方法
+2. 取消 fetch 请求：使用 `AbortController API`
+3. 取消 axios 请求：axios 可以使用 cancelToken 方法（但该方法已经废弃）。同样，axios 也支持 `AbortController API`
+
+下面详细描述使用 ``AbortController API` 的方法
 
 ```js
 var redundantRequests = 0;
