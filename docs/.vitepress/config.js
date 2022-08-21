@@ -16,7 +16,8 @@ export default {
         items: [
           {text: '图片懒加载', link:'/handbook/js/img_lazy_load.md'},
           {text: '高频输入事件优化', link: '/handbook/js/high_frequency_input.md'},
-          {text: 'indexedDB封装思考', link: '/handbook/js/indexddb.md'}
+          {text: 'indexedDB封装思考', link: '/handbook/js/indexddb.md'},
+          {text: 'localStorage封装', link: '/handbook/js/localStorage.md'},
         ]
       },
       {
