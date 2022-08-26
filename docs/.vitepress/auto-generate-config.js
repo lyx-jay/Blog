@@ -1,6 +1,7 @@
+const fs = require('fs');
+const path = require('path');
 
-import fs from 'fs';
-import path from 'path';
+
 
 /**
  * 
@@ -9,6 +10,10 @@ import path from 'path';
  * @returns Object
  */
 const auto_generate_config = function (config, rootfolderPath) {
+
+
+  rootfolderPath = __dirname.replace(/.vitepress/, '') + rootfolderPath;
+
   const newConfig = JSON.parse(JSON.stringify(config));
   const fileFolderNames = fs.readdirSync(rootfolderPath);
   const folderNames = [];  // 所有文件夹名称
@@ -47,7 +52,7 @@ const auto_generate_config = function (config, rootfolderPath) {
         if (sidebar.text === folder) {
           sidebar.items.push({
             text: name.replace(/(.md)$/, ''),
-            link: filePath.replace(/(\.)+/, '')
+            link: filePath.replace(/.*(?=\/handbook)/, '')
           });
           console.log(sidebar)
           return;
@@ -59,4 +64,4 @@ const auto_generate_config = function (config, rootfolderPath) {
   return newConfig;
 }
 
-export default auto_generate_config;
+module.exports =  auto_generate_config;

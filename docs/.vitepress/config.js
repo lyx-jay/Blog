@@ -1,7 +1,8 @@
 
-import auto_generate_config from "./auto-generate-config.js";
+// import auto_generate_config from "./auto-generate-config.js";
+const auto_generate_config = require('./auto-generate-config');
 
-const ROOTFOLDERPATH = '../handbook';
+const ROOTFOLDERPATH = 'handbook';
 
 const config = {
   title: "VitePress",
@@ -12,7 +13,7 @@ const config = {
   }
 }
 
-export default auto_generate_config(config, ROOTFOLDERPATH);
+module.exports = auto_generate_config(config, ROOTFOLDERPATH);
 
 // export default {
 //   title: "VitePress",
