@@ -46,16 +46,16 @@ const auto_generate_config = function (config, rootfolderPath) {
       newConfig.themeConfig.sidebar.forEach(sidebar => {
         if (sidebar.text === folder) {
           sidebar.items.push({
-            text: name,
-            link: filePath
+            text: name.replace(/(.md)$/, ''),
+            link: filePath.replace(/(\.)+/, '')
           });
+          console.log(sidebar)
           return;
         }
       })
     })
   });
 
-  console.log(newConfig)
   return newConfig;
 }
 
