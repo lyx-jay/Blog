@@ -3,7 +3,7 @@ const auto_generate_config = require('./auto-generate-config');
 const ROOTFOLDERPATH = 'handbook';
 
 const config = {
-  title: "VitePress",
+  title: "𝓛𝔂𝔁",
   description: "Write My Mind",
   base: "/Blog",
   themeConfig: {
