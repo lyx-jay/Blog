@@ -1,5 +1,3 @@
-
-// import auto_generate_config from "./auto-generate-config.js";
 const auto_generate_config = require('./auto-generate-config');
 
 const ROOTFOLDERPATH = 'handbook';
