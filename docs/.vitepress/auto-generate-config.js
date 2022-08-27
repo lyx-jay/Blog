@@ -1,5 +1,28 @@
 const fs = require('fs');
 const path = require('path');
+const readline = require('readline');
+
+/**
+ * 匹配md一级标题
+ * @param {String} filePath 文件路径
+ * @param {String} fileName 文件名字，作为匹配不到一级标题时的补充值
+ * @returns 
+ */
+async function getMdH1Title(filePath, fileName) {
+  let text;
+  const fileStream = fs.createReadStream(filePath);
+  const rl = readline.createInterface({
+    input: fileStream,
+    crlfDelay: Infinity
+  });
+
+  for await (const line of rl) {
+    if (!line) continue;
+    text = line.replace(/^# (.*)/gim, `$1`);
+    if (text === line) return fileName;
+    return text;
+  }
+}
 
 
 
@@ -11,9 +34,7 @@ const path = require('path');
  */
 const auto_generate_config = function (config, rootfolderPath) {
 
-
   rootfolderPath = __dirname.replace(/.vitepress/, '') + rootfolderPath;
-
   const newConfig = JSON.parse(JSON.stringify(config));
   const fileFolderNames = fs.readdirSync(rootfolderPath);
   const folderNames = [];  // 所有文件夹名称
@@ -48,10 +69,11 @@ const auto_generate_config = function (config, rootfolderPath) {
       const name = file;
       const filePath = folderPath + '/' + file;
       // 将文件名和其路径添加到sidebar对应的items中
-      newConfig.themeConfig.sidebar.forEach(sidebar => {
+      newConfig.themeConfig.sidebar.forEach(async sidebar => {
         if (sidebar.text === folder) {
+          const title = await getMdH1Title(filePath, name);
           sidebar.items.push({
-            text: name.replace(/(.md)$/, ''),
+            text: title || name.replace(/(.md)$/, ''),
             link: filePath.replace(/.*(?=\/handbook)/, '')
           });
           console.log(sidebar)
@@ -64,4 +86,6 @@ const auto_generate_config = function (config, rootfolderPath) {
   return newConfig;
 }
 
-module.exports =  auto_generate_config;
+
+
+module.exports = auto_generate_config;
