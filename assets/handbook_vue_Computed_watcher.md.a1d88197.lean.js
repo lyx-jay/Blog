@@ -1,1 +1,0 @@
-import{_ as e,c,o,a as d}from"./app.ceb730ad.js";const l=JSON.parse('{"title":"Computed & watcher","description":"","frontmatter":{},"headers":[],"relativePath":"handbook/vue/Computed_watcher.md"}'),t={name:"handbook/vue/Computed_watcher.md"},a=d("",10),r=[a];function p(m,u,h,n,_,s){return o(),c("div",null,r)}var w=e(t,[["render",p]]);export{l as __pageData,w as default};
