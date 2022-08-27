@@ -5,10 +5,9 @@ const readline = require('readline');
 /**
  * 匹配md一级标题
  * @param {String} filePath 文件路径
- * @param {String} fileName 文件名字，作为匹配不到一级标题时的补充值
  * @returns 
  */
-async function getMdH1Title(filePath, fileName) {
+async function getMdH1Title(filePath) {
   let text;
   const fileStream = fs.createReadStream(filePath);
   const rl = readline.createInterface({
@@ -19,9 +18,12 @@ async function getMdH1Title(filePath, fileName) {
   for await (const line of rl) {
     if (!line) continue;
     text = line.replace(/^# (.*)/gim, `$1`);
-    if (text === line) return fileName;
+    // 当没有匹配到一级标题时，返回空字符串
+    if (text === line) return '';
     return text;
   }
+  // 当文件中没有内容时，返回空字符串
+  return '';
 }
 
 
@@ -71,7 +73,7 @@ const auto_generate_config = function (config, rootfolderPath) {
       // 将文件名和其路径添加到sidebar对应的items中
       newConfig.themeConfig.sidebar.forEach(async sidebar => {
         if (sidebar.text === folder) {
-          const title = await getMdH1Title(filePath, name);
+          const title = await getMdH1Title(filePath);
           sidebar.items.push({
             text: title || name.replace(/(.md)$/, ''),
             link: filePath.replace(/.*(?=\/handbook)/, '')
