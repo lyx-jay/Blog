@@ -1,0 +1,1 @@
+import{_ as e,c as t,o as a}from"./app.123e48e3.js";const k=JSON.parse('{"title":"test","description":"","frontmatter":{"title":"test"},"headers":[],"relativePath":"handbook/webpack/webpack2.md"}'),o={name:"handbook/webpack/webpack2.md"};function c(r,s,n,p,d,_){return a(),t("div")}var m=e(o,[["render",c]]);export{k as __pageData,m as default};
