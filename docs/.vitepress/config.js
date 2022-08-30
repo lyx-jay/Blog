@@ -1,4 +1,5 @@
-const auto_generate_config = require('./auto-generate-config');
+// const auto_generate_config = require('./auto-generate-config');
+const auto_generate_config = require('auto-generate-vitepress-config');
 
 const ROOTFOLDERPATH = 'handbook';
 
