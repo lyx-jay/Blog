@@ -9,6 +9,9 @@ const config = {
   base: "/Blog",
   themeConfig: {
     sidebar: []
+  },
+  markdown: {
+    lineNumbers: true
   }
 }
 
