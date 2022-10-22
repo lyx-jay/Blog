@@ -8,8 +8,8 @@
 
 在 vue3 中，整个响应式数据结构如下图所示：
 
-![reactive-1](./image/reactive-1.png)
-![reactive-2](./image/reactive-2.png)
+![reactive-1](../../image/reactive-1.png)
+![reactive-2](../../image/reactive-2.png)
 
 下面，详细介绍如何清除遗留的副作用函数这一部分：
 
