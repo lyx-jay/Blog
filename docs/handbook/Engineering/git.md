@@ -45,6 +45,16 @@ PS：`stash` 是本地的，不会通过 `git push` 上传到远端
 4. 执行 `git checkout <分支名称>` 命令，切换到我们想要拉取的指定某一个分支的本地分支
 
 
+## 删除分支
+
+### 删除本地分支
+
+`git branch -d local_branch-name`
+
+### 删除远程分支
+
+`git `
+
 ## git merge
 
 分支合并需要两步，例如，想要将 A 分支合并到 B 分支
