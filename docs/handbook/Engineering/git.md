@@ -44,6 +44,21 @@ PS：`stash` 是本地的，不会通过 `git push` 上传到远端
 
 4. 执行 `git checkout <分支名称>` 命令，切换到我们想要拉取的指定某一个分支的本地分支
 
+### git checkout
+
+`git checkout` 命令可以用于签出分支，不仅作用于本地分支，远程分支也可以生效
+
+有如下两种方法：
+
+第一种：
+
+1. `git fetch -all`
+2. `git checkout 远程分支名`
+
+第二种：
+
+1. `git checkout -b 创建的本地分支名 origin/远程分支名`
+
 
 ## 删除分支
 
