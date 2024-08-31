@@ -43,7 +43,7 @@ main.js -> main-1.js
 |  文件   | chunkhash  |
 |  ----  | ----  |
 | main  | eb47078030e568214c45 |
-| index  | <font color=red>a09cd21a892a640a7d8f</font> |
+| index  | <div style="color:red">a09cd21a892a640a7d8f</div> |
 
 对比发现，仅有 `index.js` 文件的 `chunkhash` 发生了变化。因为仅是 `index.js` 入口的文件依赖发生了变化，`main.js` 入口文件并没有发生变化。
 
